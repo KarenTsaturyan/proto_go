@@ -37,4 +37,11 @@ go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
 
 ---
 
-If you'd like, I can add a short example `.proto` snippet and show where the generated Go package will be placed. 💡
+## How to update versions
+### In services
+go get github.com/KarenTsaturyan/proto_go@v1.0.0
+go mod tidy
+
+## Proto 
+git tag v0.0.2
+git push origin v0.0.2
