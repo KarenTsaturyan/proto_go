@@ -12,6 +12,8 @@ service Auth {
   rpc Login (LoginRequest) returns (LoginResponse);
   rpc IsAdmin (IsAdminRequest) returns (IsAdminResponse);
   rpc Logout (LogoutRequest) returns (LogoutResponse);
+  // CreateApp creates a new application with given name and secret.
+  rpc CreateApp (CreateAppRequest) returns (CreateAppResponse);
 }
 
 message IsAdminRequest {
@@ -47,4 +49,15 @@ message LogoutRequest {
 
 message LogoutResponse {
   bool success = 1; // Indicates whether the logout was successful.
+}
+
+message CreateAppRequest {
+  int64 user_id = 1;
+  string name = 2;
+  string secret = 3;
+}
+
+message CreateAppResponse {
+  int64 user_id = 1;
+  string name = 2;
 }
