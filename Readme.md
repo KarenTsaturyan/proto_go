@@ -39,7 +39,7 @@ go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
 
 ## How to update versions
 ### In services
-go get github.com/KarenTsaturyan/proto_go@v1.0.0
+go get github.com/KarenTsaturyan/proto_go@v0.0.2
 go mod tidy
 
 ## Proto 
